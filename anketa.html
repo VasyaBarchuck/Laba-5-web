@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+	<header>
+		<h1>Анкета</h1>
+	</header>
+	<fieldset style="width: 50%">
+		<legend>Контактна інформація</legend>
+		<b>1. Введіть вашу адресу електронної пошти:</b>
+		<br>
+		<label for="email"></label>
+		<input class="btn" type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" autocomplete="off" required>
+		<br><br>
+	<div><b>2. Придумайте пароль:</b></div>
+		<label for="password"></label>
+		<input class="btn" type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="Password" required>
+		<br><br>
+	<div><b>3. Напишіть свій номер телефону:</b></div>
+		<label for="tel"></label>
+		<input class="btn" type="tel" id="tel" name="tel" pattern="380[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="Номер телефону" required>
+		<br><br>
+		<div><b>4. Вставте посилання на вашу соціальну мережу:</b></div>
+		<label for="url"></label>
+		<input class="btn" type="url" id="url" name="url" pattern="http(s?)(:\/\/)((www.)?)(([^.]+)\.)?([a-zA-z0-9\-_]+)(.com|.net|.gov|.org|.in)(\/[^\s]*)?" placeholder="Введіть адресу вашої соціальної мережі" required>
+		<br>
+		<br>
+		<div><b>5. Дата вашого народження: </b></div>
+		<label for="bd"></label>
+		<input type="date" id="bd" name="bd" min="1930-01-01" max="2019-12-31"><br><br>
+		</fieldset>
+		<br>
+		<br>
+	<fieldset style="width: 50%">
+		<legend>1</legend>
+		<h3>Де ви найчастіше всього дивитесь фільми?</h3>
+		<input type="radio" id="cinema" name="throw" value="cinema">
+		<label for="cinema">У кінотеатрі</label><br>
+		<input type="radio" id="internet" name="throw" value="internet">
+		<label for="internet">В інтернеті</label><br>
+		<input type="radio" id="phone" name="throw" value="phone">
+	 	<label for="phone">На портативних девайсах</label> <br>			
+		<input type="radio" id="home" name="throw" value="Home">
+	 	<label for="home">Вдома</label>	
+	</fieldset>			
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>2</legend>
+		<h3>Як часто ви ходите в кіно?</h3>
+		<label for="satisfaction"></label>
+			<input list="satisfaction">
+   			<datalist id="satisfaction">
+    		<option value="Один раз в тиждень"></option>
+    		<option value="Один раз в місяць"></option>
+    		<option value="Один раз в рік"></option>
+    		<option value="Не ходжу"></option>
+    		</datalist>
+    	<br>	
+    	<div><h3> Коли вийшов ваш улюблений фільм?: </h3></div>
+		<label for="act"> </label>
+		<input type="datetime-local" id="act">
+    	<div><h3> На якому тижні плануєте сходити у кінотеатр?: </h3></div>
+		<label for="fweek"></label>
+		<input type="week" id="fweek" name="fweek"><br><br>	
+    	<h3>Наскільки сильно ви любите дивитися фільми? (від 0 до 10)</h3>
+    	<span>0 1 2 3 4 5 6 7 8 9 10</span><br>
+		<label for="hardworking"></label>
+		<input type="range" id="hardworking" name="hardworking" min="0" max="11"><br><br>
+		<div><h3> Оцініть свій улюблений фільм (від 1 до 10) </h3></div>
+		<label for="film"></label>
+		<input type="number" id="film" name="film" min="1" max="10"><br><br>	 	
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>3</legend>
+		<h3>Звідки ви найчастіше отримуєте мультимедію</h3>
+		<input type="radio" id="shop" name="mm" value="shop">
+		<label for="shop">Купляю у магазині</label><br>
+		<input type="radio" id="internet1" name="mm" value="internet1">
+		<label for="internet1">Купляю в інтернеті</label><br>
+		<input type="radio" id="internet2" name="mm" value="internet2">
+	 	<label for="internet2">Скачую з інтернету</label> <br>			
+		<input type="radio" id="tv" name="mm" value="tv">
+	 	<label for="tv">По телебаченню</label>	
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>4</legend>
+		<div><h3>Скільки каналів дивитесь в загальному</h3></div>
+		<textarea spellcheck="true" maxlength="100"></textarea>
+		<div><h3>Який канал дивитесь найчастіше?</h3></div>
+		<textarea spellcheck="true" maxlength="100"></textarea>
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>5</legend>
+		<h3>Граєте у комп'ютерні ігри?</h3>
+		<input type="radio" id="yes" name="game" value="yes">
+		<label for="yes">Так</label><br>
+		<input type="radio" id="sometime" name="game" value="sometime">
+		<label for="sometime">Інколи</label><br>
+		<input type="radio" id="no" name="game" value="no">
+	 	<label for="no">Ні</label> <br>			
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>6</legend>
+		<div><h3>Яку сторінку мультимелії ви відвідуєте найчастіше? </h3></div>
+		<textarea spellcheck="true" maxlength="100"></textarea>
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>7</legend>
+		<div><h3>Яким програвачем мультимедії ви коистуєтесь найчастіше?</h3></div>
+		<textarea spellcheck="true" maxlength="100"></textarea>
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>8</legend>
+		<div><h3>Скільки годин в день в середньому ви виділяєте мультимедії?</h3></div>
+		<textarea spellcheck="true" maxlength="100"></textarea>
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>9</legend>
+		<h3>Яким аудіоформатом ви користуєтесь, щоб слухати музику?</h3>
+		<input type="radio" id="wma" name="audio" value="wma">
+		<label for="wma">WMA</label><br>
+		<input type="radio" id="flac" name="audio" value="flac">
+		<label for="flac">FLAC</label><br>
+		<input type="radio" id="ogg" name="audio" value="ogg">
+	 	<label for="ogg">OGG</label> <br>			
+		<input type="radio" id="other1" name="audio" value="other1">
+		<span></span>
+		<label for="other1"> Іншими (уточніть нижче)</label><div >
+		<span>
+		<input type="text" placeholder="Введите ответ">
+		</span></div>
+	</fieldset>
+	<br>
+	<br>
+	<fieldset style="width: 50%">
+		<legend>10</legend>
+		<h3>Якому відеоформату ви надаєте перевагу?</h3>
+		<input type="radio" id="wkv" name="video" value="wkv">
+		<label for="wkv">WKV</label><br>
+		<input type="radio" id="mp4" name="video" value="mp4">
+		<label for="mp4">MP4</label><br>
+		<input type="radio" id="mpeg" name="video" value="mpeg">
+		<label for="mpeg">MPEG</label><br>
+		<input type="radio" id="mov" name="video" value="mov">
+	 	<label for="mov">MOV</label> <br>			
+		<input type="radio" id="other1" name="video" value="other1">
+		<span></span>
+		<label for="other1"> Іншим (уточніть нижче)</label>
+		<div>
+		<span>
+		<input type="text" placeholder="Введите ответ">
+		</span>
+		</div>
+	</fieldset>
+	<br>
+		<label for="submit"></label>
+		<input type="submit" value="Відправити">
+		<label for="reset"></label>
+		<input type="reset" value="Очистити">
+		<br>
+		<br>
+		<br>
+		<br>
+		<label for="progress"></label>
+		<progress class="progress" value="40" max="100"></progress><br>
+		<label for="users"></label><br>
+		<meter id="users" value="8" min="0" max="10"></meter><br>	
+		<br>
+		<p><input type="search" name="search" placeholder="Пошук по сайту"> 
+   		<button>Пошук</button></p>
+   		<div style="display: inline-block;">
+   		<a href="https://www.google.com/">
+		<img src="https://img.icons8.com/office/40/000000/google-logo.png"/>
+		</a>
+		</div>
+		<div style="display: inline-block;" class="div">
+		<a href="https://uk-ua.facebook.com/">
+		<img src="https://img.icons8.com/color/48/000000/facebook.png"/>
+		</a>
+		</div>
+
+
+
+	</form>	
+</body>
+</html>
